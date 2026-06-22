@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Program name: patient-form.html
+    Author: Hakimi Nguyen
+    Date created: June 21, 2026
+    Date last edited: June 21, 2026
+    Version: 1.0
+    Description: Patient registration form for a medical website homework assignment.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Family Medical - Patient Registration</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top banner section -->
+    <div id="banner">
+        <div class="banner-left">
+            <img src="logo.png" alt="Sunrise Family Medical logo" class="logo">
+            <div>
+                <h1>Sunrise Family Medical</h1>
+                <p class="tagline">Patient Registration Portal</p>
+            </div>
+        </div>
+        <p id="today-date">Today is:</p>
+    </div>
+
+    <!-- Main form section -->
+    <div id="main-content">
+        <h2>New Patient Registration Form</h2>
+        <p>Please complete all required information before submitting your registration.</p>
+
+        <form action="thankyou.html">
+            <table class="form-table">
+                <tr>
+                    <td><label for="firstName">First Name:</label></td>
+                    <td><input type="text" id="firstName" name="firstName" maxlength="30" required></td>
+                    <td><label for="middleInitial">Middle Initial:</label></td>
+                    <td><input type="text" id="middleInitial" name="middleInitial" maxlength="1"></td>
+                    <td><label for="lastName">Last Name:</label></td>
+                    <td><input type="text" id="lastName" name="lastName" maxlength="30" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="text" id="dob" name="dob" placeholder="MM/DD/YYYY" pattern="\d{2}/\d{2}/\d{4}" required></td>
+                    <td><label for="ssn">Social Security:</label></td>
+                    <td colspan="3"><input type="password" id="ssn" name="ssn" minlength="9" maxlength="11" placeholder="Obscured"></td>
+                </tr>
+                <tr>
+                    <td><label for="address1">Address Line 1:</label></td>
+                    <td colspan="5"><input type="text" id="address1" name="address1" maxlength="30" required class="wide-input"></td>
+                </tr>
+                <tr>
+                    <td><label for="address2">Address Line 2:</label></td>
+                    <td colspan="5"><input type="text" id="address2" name="address2" maxlength="30" class="wide-input"></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td><input type="text" id="city" name="city" maxlength="30" required></td>
+                    <td><label for="state">State:</label></td>
+                    <td>
+                        <select id="state" name="state" required>
+                            <option value="">Select</option>
+                            <option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option>
+                            <option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option>
+                            <option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option>
+                            <option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option>
+                            <option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option>
+                            <option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option>
+                            <option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option>
+                        </select>
+                    </td>
+                    <td><label for="zip">Zip Code:</label></td>
+                    <td><input type="text" id="zip" name="zip" minlength="5" maxlength="10" pattern="[0-9]{5}(-[0-9]{4})?" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="name@domain.com" required></td>
+                    <td><label for="phone">Phone:</label></td>
+                    <td colspan="3"><input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+                </tr>
+                <tr>
+                    <td><label for="symptoms">Current Symptoms:</label></td>
+                    <td colspan="5"><textarea id="symptoms" name="symptoms" rows="3" cols="50" placeholder="Describe your current symptoms or reason for visit."></textarea></td>
+                </tr>
+                <tr>
+                    <td>Medical History:</td>
+                    <td colspan="5" class="choices">
+                        <label><input type="checkbox" name="history" value="chickenpox"> Chicken Pox</label>
+                        <label><input type="checkbox" name="history" value="measles"> Measles</label>
+                        <label><input type="checkbox" name="history" value="covid19"> Covid-19</label>
+                        <label><input type="checkbox" name="history" value="tetanus"> Tetanus</label>
+                        <label><input type="checkbox" name="history" value="asthma"> Asthma</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td colspan="5" class="choices">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label><input type="radio" name="gender" value="other"> Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vaccinated?</td>
+                    <td colspan="5" class="choices">
+                        <label><input type="radio" name="vaccinated" value="yes"> Yes</label>
+                        <label><input type="radio" name="vaccinated" value="no"> No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Insurance?</td>
+                    <td colspan="5" class="choices">
+                        <label><input type="radio" name="insurance" value="yes"> Yes</label>
+                        <label><input type="radio" name="insurance" value="no"> No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="healthScale">Health Rating:</label></td>
+                    <td colspan="5">1 <input type="range" id="healthScale" name="healthScale" min="1" max="10"> 10</td>
+                </tr>
+                <tr>
+                    <td><label for="userId">Desired User ID:</label></td>
+                    <td><input type="text" id="userId" name="userId" maxlength="20" required></td>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                    <td><label for="rePassword">Re-enter Password:</label></td>
+                    <td><input type="password" id="rePassword" name="rePassword" required></td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="button-row">
+                        <input type="reset" value="CLEAR AND START OVER" class="clear-button">
+                        <input type="submit" value="SUBMIT" class="submit-button">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- Footer section -->
+    <div id="footer">
+        <p><strong>Sunrise Family Medical</strong> | PO Box 18881 | Sugar Land, TX 77496</p>
+        <button onclick="location.href='mailto:contact@sunrisefamilymedical.com'">Contact Us</button>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </div>
+
+    <script>
+        const today = new Date();
+        document.getElementById("today-date").innerHTML = "Today is: " + today.toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+    </script>
+    <!-- End of document: patient-form.html -->
+</body>
+</html>

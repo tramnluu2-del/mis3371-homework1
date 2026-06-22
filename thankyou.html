@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    Program name: thankyou.html
+    Author: Hakimi Nguyen
+    Date created: June 21, 2026
+    Date last edited: June 21, 2026
+    Version: 1.0
+    Description: Confirmation page displayed after patient form submission.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Sunrise Family Medical</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="banner">
+        <div class="banner-left">
+            <img src="logo.png" alt="Sunrise Family Medical logo" class="logo">
+            <div>
+                <h1>Sunrise Family Medical</h1>
+                <p class="tagline">Patient Registration Portal</p>
+            </div>
+        </div>
+        <p id="today-date">Today is:</p>
+    </div>
+
+    <div id="main-content" class="thank-you-box">
+        <h2>Thank you for your submission.</h2>
+        <p>Your registration has been received.</p>
+        <a href="patient-form.html">Return to Patient Form</a>
+    </div>
+
+    <div id="footer">
+        <p><strong>Sunrise Family Medical</strong> | PO Box 18881 | Sugar Land, TX 77496</p>
+        <button onclick="location.href='mailto:contact@sunrisefamilymedical.com'">Contact Us</button>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+    </div>
+
+    <script>
+        const today = new Date();
+        document.getElementById("today-date").innerHTML = "Today is: " + today.toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+    </script>
+    <!-- End of document: thankyou.html -->
+</body>
+</html>

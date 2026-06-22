@@ -1,0 +1,144 @@
+/*
+Program name: style.css
+Author: Hakimi Nguyen
+Date created: June 21, 2026
+Date last edited: June 21, 2026
+Version: 1.0
+Description: External stylesheet for Sunrise Family Medical patient registration pages.
+*/
+
+body {
+    background-color: #eef7f6;
+    color: #243b53;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #0b6b69;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+#banner {
+    background-color: #ffffff;
+    border-bottom: 4px solid #0b6b69;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+}
+
+.banner-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.tagline {
+    color: #557c83;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+#today-date {
+    color: #174ea6;
+    font-weight: bold;
+}
+
+#main-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.12);
+    margin: 25px auto;
+    padding: 25px;
+    width: 92%;
+    max-width: 1200px;
+}
+
+.form-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.form-table td {
+    padding: 9px;
+    vertical-align: top;
+}
+
+label, .form-table td:first-child {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    border: 1px solid #9fb3c8;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 7px;
+}
+
+input[name="firstName"], input[name="lastName"] {
+    background-color: #f8fbff;
+}
+
+.wide-input {
+    width: 92%;
+}
+
+.choices label {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+.button-row {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.clear-button, .submit-button, #footer button {
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 8px;
+    padding: 11px 18px;
+}
+
+.clear-button {
+    background-color: #7c8798;
+}
+
+.submit-button, #footer button {
+    background-color: #0b6b69;
+}
+
+#footer {
+    background-color: #243b53;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+#footer a {
+    color: #d8f3dc;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#footer a:visited {
+    color: #ffd6a5;
+}
+
+.thank-you-box {
+    text-align: center;
+    min-height: 250px;
+}
+
+/* End of document: style.css */
